@@ -15,19 +15,19 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Privacy Subsystem implementation for calendartype_jalali.
+ * Privacy Subsystem implementation for jalali_callender.
  *
- * @package    calendartype_jalali
+ * @package    jalali_callender
  * @copyright  2021 Shamim Rezaie <shamim@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace calendartype_jalali\privacy;
+namespace jalali_callender\privacy;
 
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * Privacy Subsystem for calendartype_jalali implementing null_provider.
+ * Privacy Subsystem for jalali_callender implementing null_provider.
  *
  * @copyright  2021 Shamim Rezaie <shamim@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later

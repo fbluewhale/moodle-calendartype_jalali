@@ -24,10 +24,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version    = 2021011300; // The current plugin version (Date: YYYYMMDDXX).
-$plugin->requires   = 2013110100; // Requires this Moodle version.
+$plugin->version    = 2026050200; // The current plugin version (Date: YYYYMMDDXX).
+$plugin->requires   = 2023100900; // Requires this Moodle version.
 $plugin->component  = 'calendartype_jalali'; // Full name of the plugin (used for diagnostics).
-$plugin->release    = '1.3 for Moodle 2.6 onwards';
-
+$plugin->release    = '2.0 for Moodle 4.3';
 $plugin->dependencies = array('calendartype_gregorian' => ANY_VERSION);
 $plugin->maturity   = MATURITY_STABLE;

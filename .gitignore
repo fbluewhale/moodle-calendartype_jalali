@@ -1,0 +1,31 @@
+# Build artifacts
+_build/
+jalali-moodle43.zip
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node / vendor / logs
+node_modules/
+vendor/
+*.log
+
+# Composer
+composer.lock
+
+# PHPStorm
+*.iml
+
+# Misc
+*.bak
+*~
+
+# Ignore zip of releases
+*.zip
