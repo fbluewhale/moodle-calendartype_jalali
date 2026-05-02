@@ -17,12 +17,12 @@
 /**
  * The Jalali calendar type.
  *
- * @package    jalali_callender
+ * @package    calendartype_persian_jalali_callender
  * @copyright  2008 onwards Foodle Group {@link http://foodle.org}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace jalali_callender;
+namespace calendartype_persian_jalali_callender;
 use core_calendar\type_base;
 use core_calendar\type_factory;
 
@@ -31,7 +31,7 @@ defined('MOODLE_INTERNAL') || die();
 /**
  * Handles calendar functions for the Jalali calendar.
  *
- * @package jalali_callender
+ * @package calendartype_persian_jalali_callender
  * @copyright 2008 onwards Foodle Group {@link http://foodle.org}
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -86,7 +86,7 @@ class structure extends type_base {
         $months = array();
 
         for ($i = 1; $i <= 12; $i++) {
-            $months[$i] = get_string('month' . $i, 'jalali_callender');
+            $months[$i] = get_string('month' . $i, 'calendartype_persian_jalali_callender');
         }
 
         return $months;
@@ -174,32 +174,32 @@ class structure extends type_base {
     public function get_weekdays() {
         return array(
             0 => array(
-                'shortname' => get_string('wday0', 'jalali_callender'),
-                'fullname' => get_string('weekday0', 'jalali_callender')
+                'shortname' => get_string('wday0', 'calendartype_persian_jalali_callender'),
+                'fullname' => get_string('weekday0', 'calendartype_persian_jalali_callender')
             ),
             1 => array(
-                'shortname' => get_string('wday1', 'jalali_callender'),
-                'fullname' => get_string('weekday1', 'jalali_callender')
+                'shortname' => get_string('wday1', 'calendartype_persian_jalali_callender'),
+                'fullname' => get_string('weekday1', 'calendartype_persian_jalali_callender')
             ),
             2 => array(
-                'shortname' => get_string('wday2', 'jalali_callender'),
-                'fullname' => get_string('weekday2', 'jalali_callender')
+                'shortname' => get_string('wday2', 'calendartype_persian_jalali_callender'),
+                'fullname' => get_string('weekday2', 'calendartype_persian_jalali_callender')
             ),
             3 => array(
-                'shortname' => get_string('wday3', 'jalali_callender'),
-                'fullname' => get_string('weekday3', 'jalali_callender')
+                'shortname' => get_string('wday3', 'calendartype_persian_jalali_callender'),
+                'fullname' => get_string('weekday3', 'calendartype_persian_jalali_callender')
             ),
             4 => array(
-                'shortname' => get_string('wday4', 'jalali_callender'),
-                'fullname' => get_string('weekday4', 'jalali_callender')
+                'shortname' => get_string('wday4', 'calendartype_persian_jalali_callender'),
+                'fullname' => get_string('weekday4', 'calendartype_persian_jalali_callender')
             ),
             5 => array(
-                'shortname' => get_string('wday5', 'jalali_callender'),
-                'fullname' => get_string('weekday5', 'jalali_callender')
+                'shortname' => get_string('wday5', 'calendartype_persian_jalali_callender'),
+                'fullname' => get_string('weekday5', 'calendartype_persian_jalali_callender')
             ),
             6 => array(
-                'shortname' => get_string('wday6', 'jalali_callender'),
-                'fullname' => get_string('weekday6', 'jalali_callender')
+                'shortname' => get_string('wday6', 'calendartype_persian_jalali_callender'),
+                'fullname' => get_string('weekday6', 'calendartype_persian_jalali_callender')
             ),
         );
     }
@@ -320,10 +320,10 @@ class structure extends type_base {
     public function timestamp_to_date_string($time, $format, $timezone, $fixday, $fixhour) {
         global $CFG;
 
-        $amstring = get_string('am', 'jalali_callender');
-        $pmstring = get_string('pm', 'jalali_callender');
-        $amcapsstring = get_string('am_caps', 'jalali_callender');
-        $pmcapsstring = get_string('pm_caps', 'jalali_callender');
+        $amstring = get_string('am', 'calendartype_persian_jalali_callender');
+        $pmstring = get_string('pm', 'calendartype_persian_jalali_callender');
+        $amcapsstring = get_string('am_caps', 'calendartype_persian_jalali_callender');
+        $pmcapsstring = get_string('pm_caps', 'calendartype_persian_jalali_callender');
 
         if (empty($format)) {
             $format = get_string('strftimedaydatetime', 'langconfig');
@@ -384,8 +384,8 @@ class structure extends type_base {
         $date = $gregoriancalendar->timestamp_to_date_array($time, $timezone);
         $jdate = $this->convert_from_gregorian($date['year'], $date['mon'], $date['mday']);
 
-        $date['month'] = get_string("month{$jdate['month']}", 'jalali_callender');
-        $date['weekday'] = get_string("weekday{$date['wday']}", 'jalali_callender');
+        $date['month'] = get_string("month{$jdate['month']}", 'calendartype_persian_jalali_callender');
+        $date['weekday'] = get_string("weekday{$date['wday']}", 'calendartype_persian_jalali_callender');
         $date['yday'] = (($jdate['month'] > 6 ? 6 : $jdate['month'] - 1) + ($jdate['month'] - 1) * 30) + $jdate['day'];
         $date['year'] = $jdate['year'];
         $date['mon'] = $jdate['month'];

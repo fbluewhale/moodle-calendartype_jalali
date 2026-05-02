@@ -17,16 +17,16 @@
 /**
  * Version details.
  *
- * @package calendartype_jalali
+ * @package calendartype_persian_jalali_callender
  * @copyright 2008 onwards Foodle Group {@link http://foodle.org}
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version    = 2026050200; // The current plugin version (Date: YYYYMMDDXX).
-$plugin->requires   = 2023100900; // Requires this Moodle version.
-$plugin->component  = 'calendartype_jalali'; // Full name of the plugin (used for diagnostics).
-$plugin->release    = '2.0 for Moodle 4.3';
+$plugin->version    = 2026050201; // The current plugin version (Date: YYYYMMDDXX).
+$plugin->requires   = 2022112800; // Requires this Moodle version (Moodle 4.2 build).
+$plugin->component  = 'calendartype_persian_jalali_callender'; // Full name of the plugin (used for diagnostics).
+$plugin->release    = '2.0 for Moodle 4.2+';
 $plugin->dependencies = array('calendartype_gregorian' => ANY_VERSION);
 $plugin->maturity   = MATURITY_STABLE;
